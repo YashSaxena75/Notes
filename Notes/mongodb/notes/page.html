@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>notes</title>
+</head><body><span style="color: #e5e5e5">sudo mongod --repair --dbpath /var/lib/mongodb<br/>
+<br/>
+sudo mongod --fork --logpath /var/lib/mongodb/mongodb.log --dbpath /var/lib/mongodb<br/>
+<br/>
+=========================================================<br/>
+<br/>
+<br/>
+1 .<b>&nbsp;mongo</b>&nbsp;command to start the shell<br/>
+<br/>
+2 . show dbs -&gt; display name of all the database<br/>
+<br/>
+3 . use dbs dbs_name -&gt; switch to the db if exists , if doesn't exists , create it and then switch<br/>
+<br/>
+4 . we have to create atleast one document <br/>
+<br/>
+5 . db.document_name.insertOne({name:"expressjs",type:"backend",files:13,active:true})<br/>
+<br/>
+6 . db.document_name.find().pretty() --&gt; display all the data<br/>
+<ul><li style="list-style-type: none"><ul><li style="list-style-type: none">db.details.find({Type:"Animal"},{Name:1}).pretty(); &nbsp;-----&gt; display only name where type is animal</li>
+</ul>
+</li>
+</ul>
+<br/>
+7 . db.goliboi.updateOne({"name":"YashSaxena"},{$set: {"type":"homosapien"}})<br/>
+<br/>
+8 . db.goliboi.updateMany({"type":"backend"},{$set: {"type":"back_end"}})<br/>
+<br/>
+9 . db.goliboi.deleteOne({"type":"homosapien"})<br/>
+<br/>
+10 . db.goliboi.deleteMany({"type":"back_end"})<br/>
+<br/>
+11 . delete all ----&gt; db.goliboi.deleteMany({})<br/>
+<br/>
+12 .<span style="font-size: 10pt">&nbsp;<span style="font-family: Droid Sans Mono">await Details.updateOne({_id},{$set:{Type:"Billi",Age:13}});<br/>
+</span></span><span style="font-size: 10pt"><span style="font-family: Droid Sans Mono"><br/>
+&nbsp;&#09;&#09;Details<span style="font-size: 14pt">.findOneAndUpdate({_id},{$set:{Type:"Billi",Age:13}},{useFindAndModify:false}); ----&gt; will get old data in output</span></span></span></span><ul><span style="color: #e5e5e5"><span style="font-size: 10pt"><span style="font-family: Droid Sans Mono"><li style="list-style-type: none"><span style="font-size: 14pt">&nbsp;&#09; </span>Details<span style="font-size: 14pt">.findOneAndUpdate({_id},{$set:{Type:"Billi",Age:13}},{useFindAndModify:false,new:true});</span></li>
+</span></span></span></ul>
+</body></html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>chakravyuh</title>
+</head><body>newuser : usersecuredpassword<br/>
+<br/>
+root : rootsecuredpassword<br/>
+<ul><li style="list-style-type: none">root : l0lp@zsw0rd (mysql)</li>
+</ul>
+<br/>
+<br/>
+subdomain : d3v3lope.chakravyuh<br/>
+<br/>
+===========================================<br/>
+<br/>
+Setup :<br/>
+<br/>
+1 . Remove newuser from sudo group -----------------------&gt; In progress<br/>
+2 . Change newuser's home directory permission ---------------------------&gt; In progress<br/>
+3 . delete bash_history ---------------------------&gt; In progress<br/>
+<br/>
+==============================================<br/>
+<br/>
+<br/>
+&lt;VirtualHost *:80&gt;<br/>
+DocumentRoot /var/www/html/server/<br/>
+ServerName d3v3lope.chakravyuh<br/>
+&lt;Directory /var/www/html/server/&gt;<br/>
+AllowOverride All<br/>
+Order Allow,Deny<br/>
+Allow from All<br/>
+&lt;/Directory&gt;<br/>
+ErrorLog ${APACHE_LOG_DIR}/error.log<br/>
+CustomLog ${APACHE_LOG_DIR}/access.log combined<br/>
+&lt;/VirtualHost&gt;</body></html>

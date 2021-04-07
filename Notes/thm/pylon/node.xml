@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<node>
+<version>6</version>
+<dict>
+  <key>title</key><string>pylon</string>
+  <key>nodeid</key><string>2170bd8c-a759-4e31-94f6-7a0eaf8eecd2</string>
+  <key>modified_time</key><integer>1617078063</integer>
+  <key>version</key><integer>6</integer>
+  <key>content_type</key><string>text/xhtml+xml</string>
+  <key>created_time</key><integer>1617010209</integer>
+  <key>order</key><integer>5</integer>
+  <key>icon</key><string>check.png</string>
+</dict>
+</node>
